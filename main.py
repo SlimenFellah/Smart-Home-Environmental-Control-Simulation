@@ -17,6 +17,7 @@ from collections import deque
 import random
 import time
 from datetime import datetime, timedelta
+import matplotlib.dates as mdates
 
 # Set random seed for reproducibility
 np.random.seed(42)
@@ -741,46 +742,48 @@ class Visualizer:
                             verticalalignment='center',
                             fontsize=8)
     
+
     def update_plots(self):
         """Update all plots with the latest data"""
         # Get time data for x-axis
         times = self.environment.history['time']
-        formatted_times = [t.strftime('%H:%M') for t in times]
-        
+        formatted_times = [t.strftime('%H:%M') for t in times]  # For labels
+        numeric_times = mdates.date2num(times)  # Convert times to numerical format for plotting
+
         # Update temperature lines
         for i in range(self.environment.rooms):
-            self.temp_lines[i].set_data(formatted_times, self.environment.history['temperature'][i])
-        
+            self.temp_lines[i].set_data(numeric_times, self.environment.history['temperature'][i])
+
         # Update luminosity lines
         for i in range(self.environment.rooms):
-            self.lum_lines[i].set_data(formatted_times, self.environment.history['luminosity'][i])
-        
+            self.lum_lines[i].set_data(numeric_times, self.environment.history['luminosity'][i])
+
         # Update air quality lines
         for i in range(self.environment.rooms):
-            self.aq_lines[i].set_data(formatted_times, self.environment.history['air_quality'][i])
-        
+            self.aq_lines[i].set_data(numeric_times, self.environment.history['air_quality'][i])
+
         # Update energy bar
         self.energy_bar[0].set_height(self.environment.energy_consumption)
-        
+
         # Update comfort bar
         if self.environment.comfort_history:
             self.comfort_bar[0].set_height(self.environment.comfort_history[-1])
-        
+
         # Update house visualization
         self.draw_house()
-        
+
         # Adjust x-axis limits if needed
         if times:
             for ax in [self.ax_temp, self.ax_lum, self.ax_aq]:
-                ax.set_xticks(formatted_times[::max(1, len(formatted_times)//10)])
+                ax.set_xticks(numeric_times[::max(1, len(numeric_times)//10)])
                 ax.set_xticklabels(formatted_times[::max(1, len(formatted_times)//10)], rotation=45)
+                ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))  # Format x-axis labels
                 ax.relim()
                 ax.autoscale_view()
-        
+
         self.fig.canvas.draw_idle()
         self.fig.canvas.flush_events()
-
-
+    
 class SmartHomeSimulation:
     """
     Main simulation class that brings together the environment, agents, and visualization.
