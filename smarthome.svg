@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Dashboard Title -->
+  <text x="400" y="30" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Smart Home Environmental Control Simulation</text>
+  
+  <!-- Graphs Section -->
+  <g id="time-series-graphs">
+    <!-- Temperature Graph -->
+    <rect x="20" y="60" width="480" height="120" fill="white" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+    <text x="30" y="80" font-family="Arial" font-size="14" font-weight="bold">Temperature (°C)</text>
+    
+    <!-- Temperature Graph Lines -->
+    <polyline points="40,150 80,145 120,147 160,150 200,153 240,155 280,153 320,150 360,148 400,147 440,149" 
+              fill="none" stroke="#ff9999" stroke-width="2"/>
+    <polyline points="40,140 80,142 120,145 160,147 200,149 240,148 280,145 320,143 360,142 400,140 440,138" 
+              fill="none" stroke="#99ff99" stroke-width="2"/>
+    <polyline points="40,130 80,133 120,135 160,138 200,140 240,142 280,144 320,142 360,140 400,138 440,136" 
+              fill="none" stroke="#9999ff" stroke-width="2"/>
+    <polyline points="40,160 80,158 120,155 160,153 200,150 240,148 280,145 320,147 360,150 400,153 440,155" 
+              fill="none" stroke="#ffff99" stroke-width="2"/>
+    
+    <!-- Axis Lines -->
+    <line x1="40" y1="160" x2="460" y2="160" stroke="#666" stroke-width="1"/>
+    <line x1="40" y1="60" x2="40" y2="160" stroke="#666" stroke-width="1"/>
+    
+    <!-- Legend -->
+    <rect x="360" y="70" width="10" height="10" fill="#ff9999"/>
+    <text x="375" y="80" font-family="Arial" font-size="12">Bedroom</text>
+    <rect x="360" y="90" width="10" height="10" fill="#99ff99"/>
+    <text x="375" y="100" font-family="Arial" font-size="12">Living Room</text>
+    <rect x="360" y="110" width="10" height="10" fill="#9999ff"/>
+    <text x="375" y="120" font-family="Arial" font-size="12">Kitchen</text>
+    <rect x="360" y="130" width="10" height="10" fill="#ffff99"/>
+    <text x="375" y="140" font-family="Arial" font-size="12">Bathroom</text>
+    
+    <!-- Luminosity Graph -->
+    <rect x="20" y="200" width="480" height="120" fill="white" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+    <text x="30" y="220" font-family="Arial" font-size="14" font-weight="bold">Luminosity (lux)</text>
+    
+    <!-- Luminosity Graph Lines -->
+    <polyline points="40,290 80,270 120,250 160,240 200,260 240,280 280,290 320,280 360,270 400,260 440,250" 
+              fill="none" stroke="#ff9999" stroke-width="2"/>
+    <polyline points="40,280 80,260 120,240 160,230 200,250 240,270 280,280 320,270 360,260 400,250 440,240" 
+              fill="none" stroke="#99ff99" stroke-width="2"/>
+    <polyline points="40,270 80,250 120,230 160,220 200,240 240,260 280,270 320,260 360,250 400,240 440,230" 
+              fill="none" stroke="#9999ff" stroke-width="2"/>
+    <polyline points="40,260 80,240 120,220 160,210 200,230 240,250 280,260 320,250 360,240 400,230 440,220" 
+              fill="none" stroke="#ffff99" stroke-width="2"/>
+    
+    <!-- Axis Lines -->
+    <line x1="40" y1="300" x2="460" y2="300" stroke="#666" stroke-width="1"/>
+    <line x1="40" y1="200" x2="40" y2="300" stroke="#666" stroke-width="1"/>
+    
+    <!-- Air Quality Graph -->
+    <rect x="20" y="340" width="480" height="120" fill="white" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+    <text x="30" y="360" font-family="Arial" font-size="14" font-weight="bold">Air Quality (CO₂ ppm)</text>
+    
+    <!-- Air Quality Graph Lines -->
+    <polyline points="40,390 80,395 120,400 160,410 200,420 240,415 280,405 320,400 360,395 400,390 440,385" 
+              fill="none" stroke="#ff9999" stroke-width="2"/>
+    <polyline points="40,400 80,405 120,410 160,420 200,430 240,425 280,415 320,410 360,405 400,400 440,395" 
+              fill="none" stroke="#99ff99" stroke-width="2"/>
+    <polyline points="40,410 80,415 120,420 160,430 200,440 240,435 280,425 320,420 360,415 400,410 440,405" 
+              fill="none" stroke="#9999ff" stroke-width="2"/>
+    <polyline points="40,420 80,425 120,430 160,440 200,450 240,445 280,435 320,430 360,425 400,420 440,415" 
+              fill="none" stroke="#ffff99" stroke-width="2"/>
+    
+    <!-- Axis Lines -->
+    <line x1="40" y1="440" x2="460" y2="440" stroke="#666" stroke-width="1"/>
+    <line x1="40" y1="340" x2="40" y2="440" stroke="#666" stroke-width="1"/>
+  </g>
+  
+  <!-- Statistics Section -->
+  <g id="stats-section">
+    <!-- Energy Usage -->
+    <rect x="520" y="60" width="260" height="120" fill="white" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+    <text x="530" y="80" font-family="Arial" font-size="14" font-weight="bold">Current Energy Use (kW)</text>
+    
+    <!-- Energy Bar -->
+    <rect x="580" y="100" width="40" height="60" fill="orange"/>
+    <text x="600" y="180" font-family="Arial" font-size="12" text-anchor="middle">3.2 kW</text>
+    
+    <!-- Comfort Level -->
+    <rect x="520" y="200" width="260" height="120" fill="white" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+    <text x="530" y="220" font-family="Arial" font-size="14" font-weight="bold">Comfort Level (%)</text>
+    
+    <!-- Comfort Bar -->
+    <rect x="580" y="240" width="40" height="60" fill="green"/>
+    <text x="600" y="320" font-family="Arial" font-size="12" text-anchor="middle">85%</text>
+    
+    <!-- Home Status -->
+    <rect x="520" y="340" width="260" height="240" fill="white" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+    <text x="530" y="360" font-family="Arial" font-size="14" font-weight="bold">Home Status</text>
+    
+    <!-- Simple House Drawing -->
+    <g transform="translate(550, 380)">
+      <!-- Bedroom -->
+      <rect x="0" y="0" width="80" height="80" fill="rgba(150,150,255,0.3)" stroke="black" stroke-width="2"/>
+      <text x="40" y="20" font-family="Arial" font-size="12" text-anchor="middle">Bedroom</text>
+      <text x="40" y="40" font-family="Arial" font-size="10" text-anchor="middle">T: 22.3°C</text>
+      <text x="40" y="55" font-family="Arial" font-size="10" text-anchor="middle">L: 250 lux</text>
+      <text x="40" y="70" font-family="Arial" font-size="10" text-anchor="middle">AQ: 420 ppm</text>
+      <text x="15" y="30" font-family="Arial" font-size="14">🔥</text>
+      
+      <!-- Living Room -->
+      <rect x="100" y="0" width="80" height="80" fill="rgba(150,255,150,0.3)" stroke="black" stroke-width="2"/>
+      <text x="140" y="20" font-family="Arial" font-size="12" text-anchor="middle">Living Room</text>
+      <text x="140" y="40" font-family="Arial" font-size="10" text-anchor="middle">T: 23.1°C</text>
+      <text x="140" y="55" font-family="Arial" font-size="10" text-anchor="middle">L: 320 lux</text>
+      <text x="140" y="70" font-family="Arial" font-size="10" text-anchor="middle">AQ: 410 ppm</text>
+      <text x="115" y="30" font-family="Arial" font-size="14">💡</text>
+      <circle cx="140" cy="40" r="5" fill="black"/> <!-- Occupancy indicator -->
+      
+      <!-- Kitchen -->
+      <rect x="0" y="100" width="80" height="80" fill="rgba(255,150,150,0.3)" stroke="black" stroke-width="2"/>
+      <text x="40" y="120" font-family="Arial" font-size="12" text-anchor="middle">Kitchen</text>
+      <text x="40" y="140" font-family="Arial" font-size="10" text-anchor="middle">T: 24.0°C</text>
+      <text x="40" y="155" font-family="Arial" font-size="10" text-anchor="middle">L: 280 lux</text>
+      <text x="40" y="170" font-family="Arial" font-size="10" text-anchor="middle">AQ: 450 ppm</text>
+      <text x="15" y="130" font-family="Arial" font-size="14">🌬️</text>
+      <circle cx="40" cy="140" r="5" fill="black"/> <!-- Occupancy indicator -->
+      
+      <!-- Bathroom -->
+      <rect x="100" y="100" width="80" height="80" fill="rgba(255,255,150,0.3)" stroke="black" stroke-width="2"/>
+      <text x="140" y="120" font-family="Arial" font-size="12" text-anchor="middle">Bathroom</text>
+      <text x="140" y="140" font-family="Arial" font-size="10" text-anchor="middle">T: 23.5°C</text>
+      <text x="140" y="155" font-family="Arial" font-size="10" text-anchor="middle">L: 240 lux</text>
+      <text x="140" y="170" font-family="Arial" font-size="10" text-anchor="middle">AQ: 430 ppm</text>
+    </g>
+  </g>
+  
+  <!-- Time indicator -->
+  <rect x="320" y="480" width="160" height="30" fill="white" stroke="#ddd" stroke-width="1" rx="5" ry="5"/>
+  <text x="400" y="500" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Time: 14:30</text>
+  
+  <!-- Status text -->
+  <text x="400" y="540" font-family="Arial" font-size="14" text-anchor="middle">Intelligent agents actively optimizing environment</text>
+  <text x="400" y="560" font-family="Arial" font-size="14" text-anchor="middle">Learning progress: 65% completed</text>
+</svg>
